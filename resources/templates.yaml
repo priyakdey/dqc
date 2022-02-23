@@ -1,0 +1,21 @@
+---
+templates:
+  - name: "sql"
+    type: "sql"
+    description: "Invokes a native SQL"
+    attrs:
+      - query
+      - input_args
+  - name: "stored_proc"
+    type: "stored_proc"
+    description: "Invokes a Stored Procedure"
+    attrs:
+      - query 
+  - name: "function"
+    type: "function"
+    description: "Invokes a python function" 
+    attrs:
+      - function
+      - input_args
+      - callback
+ 

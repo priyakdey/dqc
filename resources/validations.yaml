@@ -1,0 +1,41 @@
+---
+validations:
+  - name: "select data from test_table"
+    description: "Select user details from the test_table"
+    type: "sql"
+    attrs:
+      query: "SELECT * FROM test_table"
+  - name: "select data from test_table for username user1"
+    description: "Select user details from the test_table for username user1"
+    type: "sql"
+    attrs:
+      query: "SELECT * FROM test_table WHERE username = %s"
+      input_args:
+        - user1
+  - name: "select data from test_table for username user2"
+    description: "Select user details from the test_table for username user2"
+    type: "sql"
+    attrs:
+      query: "SELECT * FROM test_table WHERE username = %s"
+      input_args:
+        - user2
+  - name: "select data from test_table for username user4 and password is abcdef"
+    description: "Select user details from the test_table for username user1"
+    type: "sql"
+    attrs:
+      query: "SELECT * FROM test_table WHERE username = %s and password = %s"
+      input_args:
+        - user4
+        - abcdef
+  - name: "Test function"
+    description: "Function prints hello world"
+    type: "function"
+    attrs:
+      function: "print_hello_world"
+  - name: "Test function with args"
+    description: "Function prints name"
+    type: "function"
+    attrs:
+      function: "print_name"
+      input_args:
+        - Priyak
